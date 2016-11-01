@@ -137,8 +137,7 @@ final class WP_SEO_Meta_Description_Layout {
       }
     }
     return 0;
-  }// End function(){}
-
+  }// End function().
 
 }// End class{}.
 endif;
