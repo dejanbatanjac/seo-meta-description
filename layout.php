@@ -74,7 +74,7 @@ final class WP_SEO_Meta_Description_Layout {
       $description = get_post_meta( $post->ID, 'seometadescription', true );
       $description = strip_tags( stripslashes( $description ) );
 
-      // echo only if not empty
+      // Echo only if not empty.
       if ( ! empty( $description ) ) {
         echo '<meta name="description" content="' . esc_attr( $description ) . '" />';
       }
@@ -88,10 +88,10 @@ final class WP_SEO_Meta_Description_Layout {
   function draw_custom_meta_box() {
     global $post;
 
-    // get the existing meta description
+    // Get the existing meta description.
     $meta_box_value = get_post_meta( $post->ID, 'seometadescription', true );
 
-    // The actual fields for data entry
+    // The actual fields for data entry.
     echo '<label for="seometadescriptoin">';
     _e( 'Meta Description', 'seo-meta-description' );
     echo '</label>';
@@ -120,7 +120,7 @@ final class WP_SEO_Meta_Description_Layout {
       return 0;
     }
 
-    // Only if user can If this is either post or page (not working with custom post types)
+    // Only if user can If this is either post or page (not working with custom post types).
     if ( isset( $_POST )  && isset( $_POST['post_type'] ) ) {
 
         // Only if we have data.
